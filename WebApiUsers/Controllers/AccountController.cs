@@ -24,7 +24,7 @@ namespace WebApiUsers.Controllers
     public class AccountController : ApiController
     {
         //private const string LocalLoginProvider = "Local";
-        //private ApplicationUserManager _userManager;
+        //private ApplicationUserManager _userManager; prueba
 
         //public AccountController()
         //{
