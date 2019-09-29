@@ -58,6 +58,7 @@ namespace Users.UI.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
+
             return View();
         }
 
@@ -79,8 +80,8 @@ namespace Users.UI.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    //  return RedirectToLocal(returnUrl);
-                    return RedirectToAction("Index", "User");
+                      return RedirectToLocal(returnUrl);
+                   // return RedirectToAction("Index", "User");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

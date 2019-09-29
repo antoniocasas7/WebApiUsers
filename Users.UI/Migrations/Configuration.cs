@@ -46,18 +46,18 @@ namespace Users.UI.Migrations
             //    context.SaveChanges();
             //}
 
-            if (!context.User.Any())
-            {
-                List<User> usuariosIniciales = new List<User>
-                    {
-                        new User { Id = 1, Name = "Juan Garcia", CreateDate = DateTime.Now.Date, UpdateDate = DateTime.Now.Date},
-                        new User{ Id = 2, Name = "Carmen Lara", CreateDate =  DateTime.Now.Date, UpdateDate = DateTime.Now.Date },
-                    };
+            //if (!context.User.Any())
+            //{
+            //    List<User> usuariosIniciales = new List<User>
+            //        {
+            //            new User { Id = 1, Name = "Juan Garcia", CreateDate = DateTime.Now.Date, UpdateDate = DateTime.Now.Date},
+            //            new User{ Id = 2, Name = "Carmen Lara", CreateDate =  DateTime.Now.Date, UpdateDate = DateTime.Now.Date },
+            //        };
 
-                // Creo los Usuarios iniciales para la entidad Users
-                context.User.AddRange(usuariosIniciales);
-                context.SaveChanges();
-            }
+            //    // Creo los Usuarios iniciales para la entidad Users
+            //    context.User.AddRange(usuariosIniciales);
+            //    context.SaveChanges();
+            //}
         }
     }
 }

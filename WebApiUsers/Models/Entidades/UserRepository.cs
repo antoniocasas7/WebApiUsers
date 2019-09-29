@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
+
 
 namespace WebApiUsers.Models.Entidades
 {
     public class UserRepository : IDisposable, IUserRepository
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
+
         public void Add(User usuario)
         {           
             db.User.Add(usuario);

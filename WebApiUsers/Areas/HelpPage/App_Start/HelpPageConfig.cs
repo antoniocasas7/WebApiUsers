@@ -33,6 +33,7 @@ namespace WebApiUsers.Areas.HelpPage
             Justification = "Part of a URI.")]
         public static void Register(HttpConfiguration config)
         {
+            config.SetDocumentationProvider(new XmlDocumentationProvider(HttpContext.Current.Server.MapPath("~/App_Data/XmlDocument.xml")));
             //// Uncomment the following to use the documentation from XML documentation file.
             //config.SetDocumentationProvider(new XmlDocumentationProvider(HttpContext.Current.Server.MapPath("~/App_Data/XmlDocument.xml")));
 

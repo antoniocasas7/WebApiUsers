@@ -30,7 +30,11 @@ namespace WebApiUsers.Controllers
             _usersRepository = usersRepository;
         }
 
-        // GET: api/User
+        // GET: localhost:64208/api/User
+        /// <summary>
+        ///     Obtiene todos los Usuarios
+        /// </summary>   
+        /// <returns>Resultado de la operacion de tipo Lista de Usuarios</returns>
         [Route("GetAll")]
         [HttpGet]
         [ResponseType(typeof(List<User>))]
@@ -40,7 +44,13 @@ namespace WebApiUsers.Controllers
             return _usersRepository.GetAll();
         }
 
-        // GET: api/User/5
+        // GET: localhost:64208/api/User/5
+
+        ///  <summary>
+        ///      Obtiene el Usuario con el Id = id
+        /// </summary>
+        /// <param name="id">Id del Usuario</param>
+        /// <returns>Resultado de la operacion de tipo User</returns>
         [Route("GetById")]
         [ResponseType(typeof(User))]
         public IHttpActionResult GetUserById(int id)
@@ -54,7 +64,14 @@ namespace WebApiUsers.Controllers
             return Ok(user);
         }
 
-        // PUT: api/User/5
+        // PUT: localhost:64208/api/User/5
+
+        ///  <summary>
+        ///      Edita un usuario
+        /// </summary>
+        /// <param name="id">Id del Usuario</param>
+        /// <param name="user">El Usuario a editar</param>
+        /// <returns>Resultado de la operacion de tipo IHttpActionResult</returns>
         [Route("Edit")]
         [ResponseType(typeof(IHttpActionResult))]
         public IHttpActionResult EditUser(int id, [FromBody] User user)
@@ -85,14 +102,16 @@ namespace WebApiUsers.Controllers
                 {
                     throw;
                 }
-            }
-
-            // return StatusCode(HttpStatusCode.NoContent);
-            // return StatusCode(HttpStatusCode.OK);
+            }        
             return Ok(user);
         }
 
-        // POST: api/User
+        // POST: localhost:64208/api/User
+        ///  <summary>
+        ///      Añade un Usuario 
+        /// </summary>
+        /// <param name="user">El Usuario a añadir </param>
+        /// <returns>Resultado de la operacion de tipo User</returns>
         [Route("Add")]
         [ResponseType(typeof(User))]
         public IHttpActionResult AddUser([FromBody] User user)
@@ -108,7 +127,12 @@ namespace WebApiUsers.Controllers
             return Ok(user);
         }
 
-        // POST: api/User/5
+        // POST: localhost:64208/api/User/5
+        ///  <summary>
+        ///      Obtiene el Usuario con el Id = id
+        /// </summary>
+        /// <param name="id">Id del Usuario</param>
+        /// <returns>Resultado de la operacion de tipo User</returns>
         [Route("Delete")]
         [ResponseType(typeof(User))]
         public IHttpActionResult DeleteUser(int id)
