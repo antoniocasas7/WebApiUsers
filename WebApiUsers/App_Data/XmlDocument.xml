@@ -521,20 +521,5 @@
             <param name="id">Id del Usuario</param>
             <returns>Resultado de la operacion de tipo User</returns>
         </member>
-        <member name="T:WebApiUsers.WebApiTest.UserRepositoryTest">
-            <summary>
-            Descripción resumida de PersonaQueryTest
-            </summary>
-        </member>
-        <member name="M:WebApiUsers.WebApiTest.UserRepositoryTest.GetAll">
-            <summary>
-            Prueba para comprobar que hay datos en la base de datos
-            </summary>
-        </member>
-        <member name="M:WebApiUsers.WebApiTest.UserRepositoryTest.GetById">
-            <summary>
-            Prueba para comprobar que el usuario de Id concreto es correcto
-            </summary>
-        </member>
     </members>
 </doc>

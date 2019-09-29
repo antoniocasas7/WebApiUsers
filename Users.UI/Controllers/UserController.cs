@@ -10,6 +10,7 @@ using Users.UI.Models;
 
 namespace Users.UI.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
